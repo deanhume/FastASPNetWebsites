@@ -1,5 +1,5 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="Default.aspx.cs" Inherits="SurfStoreApp._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SurfStoreApp.Default" MasterPageFile="~/Site.master" %>
+ <%@ OutputCache Duration="86400" VaryByParam="none"  %>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div class="span9">
@@ -67,3 +67,4 @@
     </div>
     <!--/span-->
 </asp:Content>
+

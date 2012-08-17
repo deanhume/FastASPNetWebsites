@@ -117,7 +117,9 @@
     <Content Include="Styles\bootstrap-responsive.css" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\Site.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -186,7 +188,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54972</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55/</IISUrl>
+          <IISUrl>http://localhost:5/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

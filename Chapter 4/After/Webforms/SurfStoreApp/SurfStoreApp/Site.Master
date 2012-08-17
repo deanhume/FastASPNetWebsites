@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
-<%@ Import Namespace="SurfStoreApp.Utils" %>
+﻿<%@ Import Namespace="SurfStoreApp.Utils" %>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <asp:ContentPlaceHolder runat="server" ID="HeadContent">
@@ -74,8 +75,7 @@
                 </div>
                 <!--/.well -->
             </div>
-            <asp:ContentPlaceHolder runat="server" ID="MainContent">
-            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder runat="server" ID="MainContent"></asp:ContentPlaceHolder>
         </div>
         <hr>
         <footer class="footer">

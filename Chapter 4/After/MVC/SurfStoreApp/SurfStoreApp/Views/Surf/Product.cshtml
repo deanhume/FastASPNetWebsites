@@ -1,8 +1,10 @@
 ﻿@model List<SurfStoreApp.Models.ProductModel>
+
 @{
     ViewBag.Title = "Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <div class="span9">
     <div class="row-fluid">
         @foreach (var product in Model)
@@ -12,3 +14,4 @@
     </div>
 </div>
 <!--/span-->
+

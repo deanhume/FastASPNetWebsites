@@ -1,5 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Product.aspx.cs" 
-Inherits="SurfStoreApp.Product" MasterPageFile="~/Site.master" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="SurfStoreApp.Product" %>
+
 <%@ OutputCache Duration="86400" VaryByParam="category"  %>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">

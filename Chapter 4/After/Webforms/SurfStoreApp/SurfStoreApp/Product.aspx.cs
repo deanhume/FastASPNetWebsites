@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Web;
-using System.Web.UI.HtmlControls;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace SurfStoreApp
@@ -21,9 +23,9 @@ namespace SurfStoreApp
                 FileInfo[] images = RetrieveImages(category);
                 foreach (var image in images)
                 {
-                    phProductImages.Controls.Add(BuildHtml(category, image.Name, (image.Name.Replace(image.Extension,""))));
+                    phProductImages.Controls.Add(BuildHtml(category, image.Name, (image.Name.Replace(image.Extension, ""))));
                 }
-            }           
+            }
         }
 
         /// <summary>
@@ -47,7 +49,7 @@ namespace SurfStoreApp
             imageHtml.Append("\" />");
             imageHtml.Append("</div>");
 
-            return new Literal {Text = imageHtml.ToString()};
+            return new Literal { Text = imageHtml.ToString() };
         }
 
         /// <summary>
