@@ -1,0 +1,87 @@
+﻿<%@ Import Namespace="SurfStoreApp.Utils" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent">
+        <meta charset="utf-8">
+        <title>Surf Store Application</title>
+        <link rel="shortcut icon" href="<%= FileVersionUtils.BuildVersionedFileName("Images/favicon.ico") %>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+       <%= Styles.Render("~/Styles/Css")%>
+       <%= Scripts.Render("~/Scripts/Js")%>
+        <style type="text/css">
+            body
+            {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+            .sidebar-nav
+            {
+                padding: 9px 0;
+            }
+        </style>
+        <link href="<%= FileVersionUtils.BuildVersionedFileName("Styles/bootstrap-responsive.css") %>" rel="stylesheet">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </a><a class="brand" href="Default.aspx">Surf Store Application</a>
+                <div class="btn-group pull-right">
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user">
+                    </i>Logon <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Sign Out</a></li>
+                    </ul>
+                </div>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="Default.aspx">Home</a></li>
+                        <li><a href="About.aspx">About</a></li>
+                        <li><a href="Contact.aspx">Contact</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">All Items</li>
+                        <li><a href="Product.aspx?category=surfboard">Surfboards</a></li>
+                        <li><a href="Product.aspx?category=mens">Mens</a></li>
+                        <li><a href="Product.aspx?category=ladies">Ladies</a></li>
+                        <li><a href="Product.aspx?category=fins">Fins</a></li>
+                    </ul>
+                </div>
+                <div class="well form-search">
+                    <h3>
+                        Browse the Store</h3>
+                    <input type="text" class="input-medium search-query" value="Search.....">
+                    <button type="submit" class="btn">
+                        Search</button>
+                </div>
+                <!--/.well -->
+            </div>
+            <asp:ContentPlaceHolder runat="server" ID="MainContent"></asp:ContentPlaceHolder>
+        </div>
+        <hr>
+        <footer class="footer">
+        <p class="pull-right"><a href="Default.aspx">Back to top</a></p>
+        <p>Surf Store 2012</p>
+      </footer>
+    </div>
+    <!--/.fluid-container-->
+</body>
+</html>
