@@ -18,7 +18,8 @@ Also included with each chapter is a ASP.net Webforms sample application. This h
 
 The different folders contain the solutions of both the **MVC and Webforms** applications. The Before folder contains the solutions before any optimizations have been applied. This is so that you can run through the example in each chapter and apply the changes. Next, the After folder contains the files after the changes have been applied – this way you can check and compare against the changes you have made.
 
-One important caveat worth mentioning is that the built-in development webserver, known as Cassini, which comes with Visual Studio doesn’t quite reproduce the full blown IIS that we need as we run through in this book. When in development, you might need to deploy your application or the sample application to your Localhost, a server with IIS installed, or you can use [IIS Express][3]. This will give you the best results when running through each example.
+Each chapter comes with the sample site in both ASP.net Webforms and ASP.net MVC. This way you are able to use whichever part of the ASP.net development framework you are most comfortable with. In order to get up and running using the sample Surf Store application, you will need to have a copy of Visual Studio 2012 or a free copy of Visual Studio Express 2012 which is available to download via the following link - http://www.microsoft.com/visualstudio/11/en-us/products/express
+
 
   [1]: http://c1431883.r83.cf3.rackcdn.com/Folder-Structure.jpg
   [2]: http://c1431883.r83.cf3.rackcdn.com/SampleApplication.jpg
