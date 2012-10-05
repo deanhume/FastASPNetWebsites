@@ -1,4 +1,5 @@
-﻿@model List<SurfStoreApp.Models.ProductModel>
+﻿@using SurfStoreApp.Utils
+@model List<SurfStoreApp.Models.ProductModel>
 
 @{
     ViewBag.Title = "Product";
@@ -9,7 +10,7 @@
     <div class="row-fluid">
         @foreach (var product in Model)
         {
-            <div class="span4"><h2>@product.ImageDescription</h2><img src="@Url.Content(product.ImageUrl)"></div>
+            <div class="span4"><h2>@product.ImageDescription</h2><img src="@Html.CdnUrl(product.ImageUrl)"></div>
         }
     </div>
 </div>

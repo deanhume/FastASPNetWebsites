@@ -70,7 +70,7 @@
         <hr>
         <footer class="footer">
             <p class="pull-right"><a href="Default.aspx">Back to top</a></p>
-            <p>Surf Store 2012</p>
+            <p>Surf Store <%= DateTime.Now.Year %></p>
         </footer>
     </div>
     <!--/.fluid-container-->

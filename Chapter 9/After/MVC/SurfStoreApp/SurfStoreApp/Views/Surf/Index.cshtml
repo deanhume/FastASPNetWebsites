@@ -5,7 +5,7 @@
 }
 
  <div class="span9">
-        <div style="background-image: url('@Url.Content("~/Content/Images/intro.jpg")'); width: 100%; height: 400px;
+        <div style="background-image: url('@Html.CdnUrl("~/Content/Images/intro.jpg")'); width: 100%; height: 400px;
             background-repeat: no-repeat;">
             <div style="padding: 40px;">
                 <h2>
@@ -34,13 +34,13 @@
                 <div class="span4" style="padding: 5px">
                     <h2>
                         Skate</h2>
-                    <img src="@Url.Content("~/Content/Images/skate-homepage.png")" width="297" height="197"  />
+                    <img src="@Html.CdnUrl("~/Content/Images/skate-homepage.png")" width="297" height="197"  />
                 </div>
             </a><a href="@Url.Action("Product", "Surf", new { Category = "mens" })">
                 <div class="span4" style="padding: 5px">
                     <h2>
                         Snow</h2>
-                    <img src="@Url.Content("~/Content/Images/image.jpg")" width="297" height="197"  />
+                    <img src="@Html.CdnUrl("~/Content/Images/image.jpg")" width="297" height="197"  />
                 </div>
             </a>
         </div>
@@ -50,19 +50,19 @@
                 <div class="span4" style="padding: 5px">
                     <h2>
                         Mens</h2>
-                    <img src="@Url.Content("~/Content/Images/mens-homepage.png")" width="297" height="197"  />
+                    <img src="@Html.CdnUrl("~/Content/Images/mens-homepage.png")" width="297" height="197"  />
                 </div>
             </a><a href="@Url.Action("Product", "Surf", new { Category = "ladies" })">
                 <div class="span4" style="padding: 5px">
                     <h2>
                         Ladies</h2>
-                    <img src="@Url.Content("~/Content/Images/ladies-homepage.png")" width="297" height="197"  />
+                    <img src="@Html.CdnUrl("~/Content/Images/ladies-homepage.png")" width="297" height="197"  />
                 </div>
             </a><a href="@Url.Action("Product", "Surf",new {Category = "Surfboard"})">
                 <div class="span4" style="padding: 5px">
                     <h2>
                         All Brands</h2>
-                    <img src="@Url.Content("~/Content/Images/allbrands-homepage.png")" width="297" height="197" />
+                    <img src="@Html.CdnUrl("~/Content/Images/allbrands-homepage.png")" width="297" height="197" />
                 </div>
             </a>
         </div>

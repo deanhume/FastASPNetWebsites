@@ -169,6 +169,7 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Utils\CDNUtils.cs" />
     <Compile Include="Utils\DataUriUtils.cs" />
     <Compile Include="Utils\ETagUtils.cs" />
     <Compile Include="Utils\FileVersionUtils.cs" />
@@ -203,7 +204,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55931</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:881/</IISUrl>
+          <IISUrl>http://localhost:991/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

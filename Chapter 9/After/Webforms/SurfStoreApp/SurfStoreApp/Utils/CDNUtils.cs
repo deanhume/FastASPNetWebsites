@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
-using System.Web.Mvc;
+using System.Linq;
+using System.Web;
 
 namespace SurfStoreApp.Utils
 {
@@ -11,10 +13,9 @@ namespace SurfStoreApp.Utils
         /// for the CDN depending whether or not we are in release
         /// or debug mode.
         /// </summary>
-        /// <param name="helper">The HTML helper that is being used.</param>
-        /// <param name="contentPath">The path of the content. Normally starts with a ~</param>
+        /// <param name="contentPath">The path of the content.</param>
         /// <returns>Returns a full URL based on whether or not in release mode</returns>
-        public static string CdnUrl(this HtmlHelper helper, string contentPath)
+        public static string CdnUrl(string contentPath)
         {
             // If in release mode
             #if (!DEBUG)
@@ -32,10 +33,7 @@ namespace SurfStoreApp.Utils
                 contentPath = combinedUri.ToString();
             #endif
 
-            // Create the correct URL
-            var url = new UrlHelper(helper.ViewContext.RequestContext);
-
-            return url.Content(contentPath);
+            return contentPath;
         }
     }
 }

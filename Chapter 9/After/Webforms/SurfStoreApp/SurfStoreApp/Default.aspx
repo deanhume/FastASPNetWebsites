@@ -25,7 +25,8 @@
                 <div class="span4" style="padding: 5px">
                     <h2>
                         Surf</h2>
-                    <img src="Images/surfing-homepage.png" width="297" height="197"   />
+                    
+                    <img src="<%= SurfStoreApp.Utils.CdnUtils.CdnUrl("Images/surfing-homepage.png") %>" width="297" height="197"   />
                 </div>
             </a><a href="Product.aspx?category=mens">
                 <div class="span4" style="padding: 5px">

@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SurfStoreApp.Default" MasterPageFile="~/Site.master" %>
- <%@ OutputCache Duration="86400" VaryByParam="none"  %>
-
+ 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div class="span9">
         <div style="background-image: url('Images/intro.jpg'); width: 100%; height: 400px;
