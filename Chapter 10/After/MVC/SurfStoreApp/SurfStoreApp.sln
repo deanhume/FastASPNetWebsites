@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurfStoreApp", "SurfStoreApp\SurfStoreApp.csproj", "{7D409D67-E750-4DA4-B439-FC03C1694AEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurfStoreApp.Logic", "SurfStoreApp.Logic\SurfStoreApp.Logic.csproj", "{36BAA9DD-22C2-46E8-BF3E-0B78837E1703}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurfStoreApp.Data", "SurfStoreApp.Data\SurfStoreApp.Data.csproj", "{7F190039-F14E-4709-9493-197DDEB2C1EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurfStoreApp.Entities", "SurfStoreApp.Entities\SurfStoreApp.Entities.csproj", "{D63E60D4-9A6D-4507-8B40-FE547AA12554}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D409D67-E750-4DA4-B439-FC03C1694AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D409D67-E750-4DA4-B439-FC03C1694AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D409D67-E750-4DA4-B439-FC03C1694AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D409D67-E750-4DA4-B439-FC03C1694AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36BAA9DD-22C2-46E8-BF3E-0B78837E1703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36BAA9DD-22C2-46E8-BF3E-0B78837E1703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36BAA9DD-22C2-46E8-BF3E-0B78837E1703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36BAA9DD-22C2-46E8-BF3E-0B78837E1703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F190039-F14E-4709-9493-197DDEB2C1EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F190039-F14E-4709-9493-197DDEB2C1EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F190039-F14E-4709-9493-197DDEB2C1EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F190039-F14E-4709-9493-197DDEB2C1EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D63E60D4-9A6D-4507-8B40-FE547AA12554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63E60D4-9A6D-4507-8B40-FE547AA12554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D63E60D4-9A6D-4507-8B40-FE547AA12554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D63E60D4-9A6D-4507-8B40-FE547AA12554}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
