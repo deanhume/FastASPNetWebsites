@@ -5,13 +5,13 @@
     <asp:ContentPlaceHolder runat="server" ID="HeadContent">
         <meta charset="utf-8">
         <title>Surf Store Application</title>
-        <link rel="shortcut icon" href="@Url.Content(@FileVersionUtils.BuildVersionedFileName("~/Content/Images/favicon.ico"))" />
+        <link rel="shortcut icon" href="@Url.Content("~/Content/Images/favicon.ico")" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link href="@Url.Content(@FileVersionUtils.BuildVersionedFileName("~/Content/Css/bootstrap.css"))" rel="stylesheet">
-        <script src="@Url.Content(@FileVersionUtils.BuildVersionedFileName("~/Scripts/jquery-1.7.2.js"))"></script>
-        <script src="@Url.Content(@FileVersionUtils.BuildVersionedFileName("~/Scripts/bootstrap-alert.js"))"></script>
+        <link href="@Url.Content("~/Content/Css/bootstrap.css")" rel="stylesheet">
+        <script src="@Url.Content("~/Scripts/jquery-1.7.2.js")"></script>
+        <script src="@Url.Content("~/Scripts/bootstrap-alert.js")"></script>
         <style type="text/css">
             body
             {
@@ -23,7 +23,7 @@
                 padding: 9px 0;
             }
         </style>
-        <link href="@Url.Content(@FileVersionUtils.BuildVersionedFileName("~/Content/Css/bootstrap-responsive.css"))" rel="stylesheet">
+        <link href="@Url.Content("~/Content/Css/bootstrap-responsive.css")" rel="stylesheet">
     </asp:ContentPlaceHolder>
 </head>
 <body>

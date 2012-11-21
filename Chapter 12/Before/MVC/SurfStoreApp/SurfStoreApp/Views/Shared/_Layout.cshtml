@@ -1,0 +1,79 @@
+﻿@using SurfStoreApp.Utils
+@using StackExchange.Profiling;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Surf Store Application</title>
+    <link rel="shortcut icon" href="@Html.CdnUrl("~/Content/Images/favicon.ico")" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    @System.Web.Optimization.Styles.Render("~/Styles/Css")
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <!-- Logo -->
+                        <a href="/" class="logo_bar">
+                            @Html.DrawImage(Url.Content("~/content/images/store-logo.png"),"Surf Store Logo")
+                            Surf Store Application</a>
+                    </div>
+                    <div class="span9">
+                        <!-- nav -->
+                        <ul class="nav">
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="@Url.Action("About", "Surf")">About</a></li>
+                            <li><a href="@Url.Action("Contact", "Surf")">Contact</a></li>
+                        </ul>
+                        <div class="btn-group pull-right">
+                            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i>Logon <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Profile</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Sign Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">All Items</li>
+                        <li><a href="@Url.Action("Product", "Surf", new { Category = "Surfboard" })">Surfboards</a></li>
+                        <li><a href="@Url.Action("Product", "Surf", new { Category = "Mens" })">Mens</a></li>
+                        <li><a href="@Url.Action("Product", "Surf", new { Category = "Ladies" })">Ladies</a></li>
+                        <li><a href="@Url.Action("Product", "Surf", new { Category = "Fins" })">Surfboard Fins</a></li>
+                    </ul>
+                </div>
+                <div class="well form-search">
+                    <h3>Browse the Store</h3>
+                    <input type="text" class="input-medium search-query" value="Search.....">
+                    <button type="submit" class="btn">
+                        Search</button>
+                </div>
+                <!--/.well -->
+            </div>
+            @RenderBody()
+        </div>
+        <hr>
+        <footer class="footer">
+            <p class="pull-right"><a href="/">Back to top</a></p>
+            <p>Surf Store 2012</p>
+        </footer>
+    </div>
+    @MiniProfiler.RenderIncludes()
+    <!--/.fluid-container-->
+</body>
+@System.Web.Optimization.Scripts.Render("~/Scripts/Js")
+</html>

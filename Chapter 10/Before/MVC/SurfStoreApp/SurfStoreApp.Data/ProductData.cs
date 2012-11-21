@@ -13,10 +13,12 @@ namespace SurfStoreApp.Data
     {
         string connectionString;
 
+        #region ctor
         public ProductData()
         {
             connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         }
+        #endregion
 
         public List<ProductDetail> GetProductDetailByCategory(string category)
         {
