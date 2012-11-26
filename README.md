@@ -1,7 +1,7 @@
 Using the Sample Application
 ---------------
 
-The sample application for the book **High Performance ASP.net** is called the **“Surf Store Application”**. It is meant to simulate an eCommerce store and not be too dissimilar from many sites that you see online today. The sample application may also seem rather basic at first, but the key thing is that the web pages contain all the elements that a standard website would have. There is JavaScript, CSS, HTML, and images – all of these make up the components of a webpage front end that we are trying to improve upon.
+The sample application for the book **Fast ASP.NET Websites** is called the **“Surf Store Application”**. It is meant to simulate an eCommerce store and not be too dissimilar from many sites that you see online today. The sample application may also seem rather basic at first, but the key thing is that the web pages contain all the elements that a standard website would have. There is JavaScript, CSS, HTML, and images – all of these make up the components of a webpage front end that we are trying to improve upon.
 
 ![Surf Store Application][2]
 
