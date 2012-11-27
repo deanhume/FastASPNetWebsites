@@ -167,7 +167,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\" />
-    <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />

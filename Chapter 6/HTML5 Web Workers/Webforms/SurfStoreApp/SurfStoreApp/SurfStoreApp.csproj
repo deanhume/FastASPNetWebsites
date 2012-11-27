@@ -178,7 +178,6 @@
     <Compile Include="Statistics.svc.cs">
       <DependentUpon>Statistics.svc</DependentUpon>
     </Compile>
-    <Compile Include="Utils\FileVersionUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
