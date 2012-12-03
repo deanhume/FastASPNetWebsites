@@ -9,11 +9,11 @@ NETWORK:
 
 CACHE:
 # JS files
-@FileVersionUtils.BuildVersionedFileName(Url.Content("~/Scripts/jquery-1.7.2.js"))
+@Url.Content("~/Scripts/jquery-1.7.2.js").AppendHash(HttpContext.Current.Request)
 
 # CSS files
-@FileVersionUtils.BuildVersionedFileName(Url.Content("~/Content/Css/bootstrap.css"))
-@FileVersionUtils.BuildVersionedFileName(Url.Content("~/Content/Css/bootstrap-responsive.css"))
+@Url.Content("~/Content/Css/bootstrap.css").AppendHash(HttpContext.Current.Request)
+@Url.Content("~/Content/Css/bootstrap-responsive.css").AppendHash(HttpContext.Current.Request)
 
 FALLBACK:
 

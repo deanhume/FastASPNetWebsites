@@ -178,6 +178,7 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Utils\Offline.cs" />
+    <Compile Include="Utils\OfflineUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

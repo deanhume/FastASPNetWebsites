@@ -7,10 +7,10 @@ NETWORK:
 
 CACHE:
 # JS files
-<%= FileVersionUtils.BuildVersionedFileName("Scripts/jquery-1.7.2.js") %>
+<%= "Scripts/jquery-1.7.2.js".AppendHash(Request) %>
 
 # CSS files
-<%= FileVersionUtils.BuildVersionedFileName("Styles/bootstrap.css") %>
-<%= FileVersionUtils.BuildVersionedFileName("Styles/bootstrap-responsive.css") %>
+<%= "Styles/bootstrap.css".AppendHash(Request) %>
+<%= "Styles/bootstrap-responsive.css".AppendHash(Request) %>
 
 FALLBACK:
