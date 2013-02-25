@@ -22,9 +22,9 @@ namespace SurfStoreApp.Utils
                 // Convert the image
                 imageUrl = ConvertImageToBase64String(imageUrl);
 
-               return new MvcHtmlString(String.Format("<img alt=\"{0}\" " +
-                                     "src=\"data:image/{1};base64,{2}\" />", alt,
-                                     fileType, imageUrl));
+                return new MvcHtmlString(String.Format("<img alt=\"{0}\" " +
+                                                       "src=\"data:image/{1};base64,{2}\" />", alt,
+                                                       fileType, imageUrl));
             }
 
             return new MvcHtmlString(String.Format("<img alt=\"{0}\" src=\"{1}\" />", alt, imageUrl));
@@ -55,17 +55,18 @@ namespace SurfStoreApp.Utils
         {
             string imagepath = HttpContext.Current.Server.MapPath(imageUrl);
 
-            Image image = Image.FromFile(imagepath);
-
-            using (MemoryStream memoryStream = new MemoryStream())
+            using (Image image = Image.FromFile(imagepath))
             {
-                // Convert Image to byte[]
-                image.Save(memoryStream, image.RawFormat);
-                byte[] imageBytes = memoryStream.ToArray();
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    // Convert Image to byte[]
+                    image.Save(memoryStream, image.RawFormat);
+                    byte[] imageBytes = memoryStream.ToArray();
 
-                // Convert byte[] to Base64 String
-                string base64String = Convert.ToBase64String(imageBytes);
-                return base64String;
+                    // Convert byte[] to Base64 String
+                    string base64String = Convert.ToBase64String(imageBytes);
+                    return base64String;
+                }
             }
         }
 

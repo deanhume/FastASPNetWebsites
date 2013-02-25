@@ -1,6 +1,4 @@
-﻿using System.Web.Mvc;
-
-namespace SurfStoreApp.Utils
+﻿namespace SurfStoreApp.Utils
 {
     public class FileVersionUtils
     {

@@ -55,17 +55,18 @@ namespace SurfStoreApp.Utils
         {
             string imagepath = HttpContext.Current.Server.MapPath(imageUrl);
 
-            Image image = Image.FromFile(imagepath);
-
-            using (MemoryStream memoryStream = new MemoryStream())
+            using (Image image = Image.FromFile(imagepath))
             {
-                // Convert Image to byte[]
-                image.Save(memoryStream, image.RawFormat);
-                byte[] imageBytes = memoryStream.ToArray();
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    // Convert Image to byte[]
+                    image.Save(memoryStream, image.RawFormat);
+                    byte[] imageBytes = memoryStream.ToArray();
 
-                // Convert byte[] to Base64 String
-                string base64String = Convert.ToBase64String(imageBytes);
-                return base64String;
+                    // Convert byte[] to Base64 String
+                    string base64String = Convert.ToBase64String(imageBytes);
+                    return base64String;
+                }
             }
         }
 

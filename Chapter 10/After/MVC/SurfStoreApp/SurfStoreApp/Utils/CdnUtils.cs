@@ -14,7 +14,7 @@ namespace SurfStoreApp.Utils
         /// <param name="helper">The HTML helper that is being used.</param>
         /// <param name="contentPath">The path of the content. Normally starts with a ~</param>
         /// <returns>Returns a full URL based on whether or not in release mode</returns>
-        public static string CdnUrl(this HtmlHelper helper, string contentPath)
+        public static MvcHtmlString CdnUrl(this HtmlHelper helper, string contentPath)
         {
             // If in release mode
             #if (!DEBUG)
@@ -35,7 +35,7 @@ namespace SurfStoreApp.Utils
             // Create the correct URL
             var url = new UrlHelper(helper.ViewContext.RequestContext);
 
-            return url.Content(contentPath);
+            return new MvcHtmlString(url.Content(contentPath));
         }
     }
 }

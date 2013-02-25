@@ -15,26 +15,26 @@ namespace SurfStoreApp.Utils
         /// <param name="imageUrl">The Url of the image</param>
         /// <param name="alt">The alt tag for the image</param>
         /// <returns>An HTML image string</returns>
-public static string DrawImage(string imageUrl, string alt)
-{
-    if (CanBrowserHandleDataUris() & IsFileSizeCorrect(imageUrl))
-    {
-        // Get the file type
-        string fileType = Path.GetExtension(imageUrl);
-        if (fileType != null)
+        public static string DrawImage(string imageUrl, string alt)
         {
-            fileType = fileType.Replace(".", "");
+            if (CanBrowserHandleDataUris() & IsFileSizeCorrect(imageUrl))
+            {
+                // Get the file type
+                string fileType = Path.GetExtension(imageUrl);
+                if (fileType != null)
+                {
+                    fileType = fileType.Replace(".", "");
+                }
+
+                // Convert the image
+                imageUrl = ConvertImageToBase64String(imageUrl);
+
+                return String.Format("<img alt=\"{0}\" " + "src=\"data:image/{1};base64,{2}\" />", alt, fileType,
+                                     imageUrl);
+            }
+
+            return String.Format("<img alt=\"{0}\" src=\"{1}\" />", alt, imageUrl);
         }
-
-        // Convert the image
-        imageUrl = ConvertImageToBase64String(imageUrl);
-
-        return String.Format("<img alt=\"{0}\" " + "src=\"data:image/{1};base64,{2}\" />", alt, fileType,
-                                imageUrl);
-    }
-
-    return String.Format("<img alt=\"{0}\" src=\"{1}\" />", alt, imageUrl);
-}
 
         /// <summary>
         /// Determine if the size of the file matches the minimum requirements.
@@ -61,17 +61,18 @@ public static string DrawImage(string imageUrl, string alt)
         {
             string imagepath = HttpContext.Current.Server.MapPath(imageUrl);
 
-            Image image = Image.FromFile(imagepath);
-
-            using (MemoryStream memoryStream = new MemoryStream())
+            using (Image image = Image.FromFile(imagepath))
             {
-                // Convert Image to byte[]
-                image.Save(memoryStream, image.RawFormat);
-                byte[] imageBytes = memoryStream.ToArray();
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    // Convert Image to byte[]
+                    image.Save(memoryStream, image.RawFormat);
+                    byte[] imageBytes = memoryStream.ToArray();
 
-                // Convert byte[] to Base64 String
-                string base64String = Convert.ToBase64String(imageBytes);
-                return base64String;
+                    // Convert byte[] to Base64 String
+                    string base64String = Convert.ToBase64String(imageBytes);
+                    return base64String;
+                }
             }
         }
 
@@ -91,7 +92,7 @@ public static string DrawImage(string imageUrl, string alt)
 
             if (browser.Browser == "IE")
             {
-                browserVersion = (float)(browser.MajorVersion + browser.MinorVersion);
+                browserVersion = (float) (browser.MajorVersion + browser.MinorVersion);
             }
 
             if (browserVersion > 8 || browserVersion == -1)
