@@ -26,6 +26,7 @@ namespace SurfStoreApp.Data
 
             // Build up the query string
             // This isn't ideal as it is open to injection attacks, but serves as example code. Prefer stored procedures.
+            // It is not possible with SQL CE to use stored procedures at this time as it is an in-memory DB.
             string query = "SELECT * FROM Product WHERE Category = '" + category + "'";
 
             //Thread.Sleep(5000);
