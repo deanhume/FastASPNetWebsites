@@ -3,7 +3,7 @@
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div class="span9">
-        <div style="background-image: url('Images/intro.jpg'); width: 100%; height: 400px;
+        <div style="background-image: url('<%= SurfStoreApp.Utils.CdnUtils.CdnUrl("Images/intro.jpg")%>'); width: 100%; height: 400px;
             background-repeat: no-repeat;">
             <div style="color: white; padding: 40px;">
                 <h2>
@@ -32,13 +32,13 @@
                 <div class="span4" style="padding: 5px">
                     <h2>
                         Skate</h2>
-                    <img src="Images/skate-homepage.png" width="297" height="197"   />
+                    <img src="<%= SurfStoreApp.Utils.CdnUtils.CdnUrl("Images/Skate-homepage.png") %>" width="297" height="197"   />
                 </div>
             </a><a href="Product.aspx?category=mens">
                 <div class="span4" style="padding: 5px">
                     <h2>
                         Snow</h2>
-                    <img src="Images/image.jpg" width="297" height="197" />
+                    <img src="<%= SurfStoreApp.Utils.CdnUtils.CdnUrl("Images/image.jpg") %>" width="297" height="197" />
                 </div>
             </a>
         </div>
@@ -48,19 +48,19 @@
                 <div class="span4" style="padding: 5px">
                     <h2>
                         Mens</h2>
-                    <img src="Images/mens-homepage.png" width="297" height="197" />
+                    <img src="<%= SurfStoreApp.Utils.CdnUtils.CdnUrl("Images/Mens-homepage.png") %>" width="297" height="197" />
                 </div>
             </a><a href="Product.aspx?category=ladies">
                 <div class="span4" style="padding: 5px">
                     <h2>
                         Ladies</h2>
-                    <img src="Images/ladies-homepage.png" width="297" height="197" />
+                    <img src="<%= SurfStoreApp.Utils.CdnUtils.CdnUrl("Images/ladies-homepage.png") %>" width="297" height="197" />
                 </div>
             </a><a href="Product.aspx?category=surfboard">
                 <div class="span4" style="padding: 5px">
                     <h2>
                         All Brands</h2>
-                    <img src="Images/allbrands-homepage.png" width="297" height="197" />
+                    <img src="<%= SurfStoreApp.Utils.CdnUtils.CdnUrl("Images/allbrands-homepage.png") %>" width="297" height="197" />
                 </div>
             </a>
         </div>

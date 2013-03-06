@@ -1,4 +1,7 @@
-﻿namespace SurfStoreApp.Utils
+﻿using System;
+using System.Configuration;
+
+namespace SurfStoreApp.Utils
 {
     public static class CdnUtils
     {
@@ -12,7 +15,7 @@
         public static string CdnUrl(string contentPath)
         {
             // If in release mode
-            #if (!DEBUG)
+            //#if (!DEBUG)
 
                 // remove the leading "~" character
                 if (contentPath.StartsWith("~"))
@@ -25,7 +28,7 @@
 
                 Uri combinedUri = new Uri(new Uri(appSetting), contentPath);
                 contentPath = combinedUri.ToString();
-            #endif
+            //#endif
 
             return contentPath;
         }
