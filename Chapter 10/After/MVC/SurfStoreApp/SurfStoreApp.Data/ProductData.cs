@@ -29,7 +29,8 @@ namespace SurfStoreApp.Data
             // It is not possible with SQL CE to use stored procedures at this time as it is an in-memory DB.
             string query = "SELECT * FROM Product WHERE Category = '" + category + "'";
 
-            //Thread.Sleep(5000);
+            // This is the slow piece of code the we were able to identify using MiniProfiler
+            Thread.Sleep(5000);
 
             using (var connection = new SqlCeConnection(connectionString))
             {

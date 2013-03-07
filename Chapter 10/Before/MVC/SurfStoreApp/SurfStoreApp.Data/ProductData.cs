@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlServerCe;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Configuration;
 using SurfStoreApp.Entities;
@@ -27,7 +28,10 @@ namespace SurfStoreApp.Data
 
             // Build up the query string
             // This isn't ideal as it is open to injection attacks, but serves as example code. Prefer stored procedures.
-            string query = "SELECT * FROM Product WHERE Category = '" + category + "'"; 
+            string query = "SELECT * FROM Product WHERE Category = '" + category + "'";
+
+            // I have purposely injected this piece of code to slow down here. We are going to use MiniProfiler to trace and detect this.
+            Thread.Sleep(5000);
 
             using (var connection = new SqlCeConnection(connectionString))
             {
