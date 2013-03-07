@@ -1,4 +1,7 @@
-﻿namespace SurfStoreApp.Utils
+﻿using System;
+using System.Configuration;
+
+namespace SurfStoreApp.Utils
 {
     public static class CdnUtils
     {

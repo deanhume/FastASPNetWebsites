@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using SurfStoreApp.Entities;
 using SurfStoreApp.Logic;
@@ -27,7 +25,7 @@ namespace SurfStoreApp
 
                 foreach (ProductDetail product in productsForCategory)
                 {
-                    phProductImages.Controls.Add(BuildHtml(category, product.ImageUrl, product.ProductDescription));
+                    phProductImages.Controls.Add(BuildHtml(category, Utils.CdnUtils.CdnUrl(product.ImageUrl), product.ProductDescription));
                 }
             }
         }
@@ -36,8 +34,8 @@ namespace SurfStoreApp
         /// Builds the HTML that displays the images.
         /// </summary>
         /// <param name="category">The category.</param>
-        /// <param name="imageName">Name of the image.</param>
-        /// <param name="imageDescription">The image description.</param>
+        /// <param name="imageUrl">The image URL.</param>
+        /// <param name="productDescription">The product description.</param>
         /// <returns></returns>
         public Literal BuildHtml(string category, string imageUrl, string productDescription)
         {

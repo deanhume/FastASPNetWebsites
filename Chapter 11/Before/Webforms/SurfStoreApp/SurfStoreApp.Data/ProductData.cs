@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlServerCe;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
+using System.Threading;
 using SurfStoreApp.Entities;
 
 namespace SurfStoreApp.Data
 {
     public class ProductData
     {
-        string connectionString;
+        readonly string _connectionString;
 
         public ProductData()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         }
 
         public List<ProductDetail> GetProductDetailByCategory(string category)
@@ -24,14 +22,20 @@ namespace SurfStoreApp.Data
             List<ProductDetail> products = new List<ProductDetail>();
 
             // Build up the query string
-            // This isn't ideal as it is open to injection attacks, but serves as example code. Prefer stored procedures.
-            string query = "SELECT * FROM Product WHERE Category = '" + category + "'"; 
+            const string query = "SELECT * FROM Product WHERE Category = @category";
 
-            using (var connection = new SqlCeConnection(connectionString))
+            // This is the slow piece of code the we are going to use MiniProfiler to identify
+            //Thread.Sleep(5000);
+
+            using (var connection = new SqlCeConnection(_connectionString))
             {
                 connection.Open();
 
-                using (SqlCeDataReader sqlCeReader = new SqlCeCommand(query, connection).ExecuteReader())
+                // Build up the SQL command
+                SqlCeCommand sqlCommand = new SqlCeCommand(query, connection);
+                sqlCommand.Parameters.AddWithValue("@category", category);
+
+                using (SqlCeDataReader sqlCeReader = sqlCommand.ExecuteReader())
                 {
                     while (sqlCeReader.Read())
                     {
