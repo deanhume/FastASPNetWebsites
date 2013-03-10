@@ -24,7 +24,7 @@ namespace SurfStoreApp.Controllers
             if (!string.IsNullOrWhiteSpace(category))
             {
                 // Retrieve the product images
-                Utils.ImageUtils imageUtils = new ImageUtils();
+                ImageUtils imageUtils = new ImageUtils();
                 var productImages = imageUtils.RetrieveProductImages(category);
 
                 // Loop through and add to our Model

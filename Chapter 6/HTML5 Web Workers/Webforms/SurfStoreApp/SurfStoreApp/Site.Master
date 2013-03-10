@@ -1,27 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <asp:ContentPlaceHolder runat="server" ID="HeadContent">
-        <meta charset="utf-8">
-        <title>Surf Store Application</title>
-        <link rel="shortcut icon" href="Images/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <%= Styles.Render("~/Styles/Css")%>
-        <style type="text/css">
-            body
-            {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
+    <meta charset="utf-8">
+    <title>Surf Store Application</title>
+    <link rel="shortcut icon" href="Images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%= Styles.Render("~/Styles/Css")%>
+    <style type="text/css">
+        body
+        {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
 
-            .sidebar-nav
-            {
-                padding: 9px 0;
-            }
-        </style>
-    </asp:ContentPlaceHolder>
+        .sidebar-nav
+        {
+            padding: 9px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar navbar-fixed-top">
@@ -79,8 +77,7 @@
     </div>
     <!--/.fluid-container-->
 </body>
-<script async src="/Scripts/jquery-1.7.2.js"></script>
-<script async src="/Scripts/bootstrap-alert.js"></script>
+<%= Scripts.Render("~/Scripts/Js") %>
 <!-- HTML5 Web Worker -->
 <script>
     if (typeof window.Worker === "function") {
