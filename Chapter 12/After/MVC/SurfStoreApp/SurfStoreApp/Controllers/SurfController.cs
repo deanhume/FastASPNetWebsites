@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using System.Web.UI;
 using StackExchange.Profiling;
 using SurfStoreApp.Entities;
 using SurfStoreApp.Logic;
@@ -15,6 +16,7 @@ namespace SurfStoreApp.Controllers
             return View();
         }
 
+        [OutputCache(Duration = 86400, VaryByParam = "category", Location = OutputCacheLocation.Client)]
         public ActionResult Product(string category)
         {
             // Check if a category was passed in first.

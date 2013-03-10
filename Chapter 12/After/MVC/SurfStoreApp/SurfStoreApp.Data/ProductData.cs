@@ -28,14 +28,17 @@ namespace SurfStoreApp.Data
             List<ProductDetail> products = new List<ProductDetail>();
 
             // Build up the query string
-            // This isn't ideal as it is open to injection attacks, but serves as example code. Prefer stored procedures.
-            string query = "SELECT * FROM Product WHERE Category = '" + category + "'";
+            const string query = "SELECT * FROM Product WHERE Category = @category";
 
             using (var connection = new SqlCeConnection(_connectionString))
             {
                 connection.Open();
 
-                using (SqlCeDataReader sqlCeReader = new SqlCeCommand(query, connection).ExecuteReader())
+                // Build up the SQL command
+                SqlCeCommand sqlCommand = new SqlCeCommand(query, connection);
+                sqlCommand.Parameters.AddWithValue("@category", category);
+
+                using (SqlCeDataReader sqlCeReader = sqlCommand.ExecuteReader())
                 {
                     while (sqlCeReader.Read())
                     {
@@ -44,7 +47,7 @@ namespace SurfStoreApp.Data
                         productDetail.ProductId = Convert.ToInt32(sqlCeReader["ProductId"]);
                         productDetail.ProductDescription = sqlCeReader["ProductDescription"] != null ? sqlCeReader["ProductDescription"].ToString() : string.Empty;
                         productDetail.ImageUrl = sqlCeReader["ImageUrl"] != null ? sqlCeReader["ImageUrl"].ToString() : string.Empty;
-                        productDetail.Category = sqlCeReader["Category"] != null ? sqlCeReader["Category"].ToString() : string.Empty; 
+                        productDetail.Category = sqlCeReader["Category"] != null ? sqlCeReader["Category"].ToString() : string.Empty;
 
                         // Add to the collection
                         products.Add(productDetail);
