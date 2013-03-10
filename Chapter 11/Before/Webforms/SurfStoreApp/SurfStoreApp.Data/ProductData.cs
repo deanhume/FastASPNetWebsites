@@ -25,7 +25,7 @@ namespace SurfStoreApp.Data
             const string query = "SELECT * FROM Product WHERE Category = @category";
 
             // This is the slow piece of code the we are going to use MiniProfiler to identify
-            //Thread.Sleep(5000);
+            Thread.Sleep(5000);
 
             using (var connection = new SqlCeConnection(_connectionString))
             {

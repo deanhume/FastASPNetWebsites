@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlServerCe;
 using System.Configuration;
+using System.Threading;
 using SurfStoreApp.Entities;
 
 namespace SurfStoreApp.Data
@@ -22,6 +23,9 @@ namespace SurfStoreApp.Data
 
             // Build up the query string
             const string query = "SELECT * FROM Product WHERE Category = @category";
+
+            // This is the code that we identified using MiniProfiler
+            //Thread.Sleep(5000);
 
             using (var connection = new SqlCeConnection(_connectionString))
             {
