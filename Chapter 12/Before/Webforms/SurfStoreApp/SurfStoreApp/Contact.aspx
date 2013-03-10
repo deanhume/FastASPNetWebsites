@@ -5,7 +5,7 @@
     <div class="span9">
         <div class="row-fluid">
             <h2>
-                CONTACT US
+                Contact Us
             </h2>
             <form id="form1" runat="server">
             <fieldset>

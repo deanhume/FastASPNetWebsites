@@ -1,5 +1,7 @@
 ﻿@using SurfStoreApp.Utils
 @using StackExchange.Profiling;
+@using System.Web.Optimization;
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    @System.Web.Optimization.Styles.Render("~/Styles/Css")
+    @Styles.Render("~/Styles/Css")
 </head>
 <body>
     <div class="navbar navbar-fixed-top">
@@ -75,5 +77,5 @@
     @MiniProfiler.RenderIncludes()
     <!--/.fluid-container-->
 </body>
-@System.Web.Optimization.Scripts.Render("~/Scripts/Js")
+@Scripts.Render("~/Scripts/Js")
 </html>

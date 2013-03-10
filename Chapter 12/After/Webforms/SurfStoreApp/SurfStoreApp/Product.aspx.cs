@@ -55,7 +55,7 @@ namespace SurfStoreApp
             imageHtml.Append(productDescription);
             imageHtml.Append("</h2>");
             imageHtml.Append("<img src=\"");
-            imageHtml.Append(imageUrl);
+            imageHtml.Append(Utils.CdnUtils.CdnUrl(imageUrl));
             imageHtml.Append("\" />");
             imageHtml.Append("</div>");
 

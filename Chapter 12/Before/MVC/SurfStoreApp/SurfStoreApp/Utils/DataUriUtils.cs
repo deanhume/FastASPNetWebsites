@@ -22,9 +22,9 @@ namespace SurfStoreApp.Utils
                 // Convert the image
                 imageUrl = ConvertImageToBase64String(imageUrl);
 
-                return new MvcHtmlString(String.Format("<img alt=\"{0}\" " +
-                                                       "src=\"data:image/{1};base64,{2}\" />", alt,
-                                                       fileType, imageUrl));
+               return new MvcHtmlString(String.Format("<img alt=\"{0}\" " +
+                                     "src=\"data:image/{1};base64,{2}\" />", alt,
+                                     fileType, imageUrl));
             }
 
             return new MvcHtmlString(String.Format("<img alt=\"{0}\" src=\"{1}\" />", alt, imageUrl));
