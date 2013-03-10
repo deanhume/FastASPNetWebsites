@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="SurfStoreApp.Contact" %>
 
- <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+ <%@ OutputCache Duration="86400" VaryByParam="none"  %>
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div class="span9">
         <div class="row-fluid">
             <h2>

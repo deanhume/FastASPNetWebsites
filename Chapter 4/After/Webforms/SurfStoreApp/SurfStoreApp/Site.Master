@@ -1,29 +1,28 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <asp:ContentPlaceHolder runat="server" ID="HeadContent">
-        <meta charset="utf-8">
-        <title>Surf Store Application</title>
-        <link rel="shortcut icon" href="Images/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <link href="Styles/bootstrap.css" rel="stylesheet">
-        <script src="Scripts/jquery-1.7.2.js"></script>
-        <script src="Scripts/bootstrap-alert.js"></script>
-        <style type="text/css">
-            body
-            {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-            .sidebar-nav
-            {
-                padding: 9px 0;
-            }
-        </style>
-        <link href="Styles/bootstrap-responsive.css" rel="stylesheet">
-    </asp:ContentPlaceHolder>
+    <meta charset="utf-8">
+    <title>Surf Store Application</title>
+    <link rel="shortcut icon" href="Images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="Styles/bootstrap.css" rel="stylesheet">
+    <script src="Scripts/jquery-1.7.2.js"></script>
+    <script src="Scripts/bootstrap-alert.js"></script>
+    <style type="text/css">
+        body
+        {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .sidebar-nav
+        {
+            padding: 9px 0;
+        }
+    </style>
+    <link href="Styles/bootstrap-responsive.css" rel="stylesheet">
 </head>
 <body>
     <div class="navbar navbar-fixed-top">
@@ -33,8 +32,7 @@
                     class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </a><a class="brand" href="Default.aspx">Surf Store Application</a>
                 <div class="btn-group pull-right">
-                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user">
-                    </i>Logon <span class="caret"></span></a>
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i>Logon <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Profile</a></li>
                         <li class="divider"></li>
@@ -65,8 +63,7 @@
                     </ul>
                 </div>
                 <div class="well form-search">
-                    <h3>
-                        Browse the Store</h3>
+                    <h3>Browse the Store</h3>
                     <input type="text" class="input-medium search-query" value="Search.....">
                     <button type="submit" class="btn">
                         Search</button>
@@ -77,9 +74,9 @@
         </div>
         <hr>
         <footer class="footer">
-        <p class="pull-right"><a href="Default.aspx">Back to top</a></p>
-        <p>Surf Store 2012</p>
-      </footer>
+            <p class="pull-right"><a href="Default.aspx">Back to top</a></p>
+            <p>Surf Store 2012</p>
+        </footer>
     </div>
     <!--/.fluid-container-->
 </body>
