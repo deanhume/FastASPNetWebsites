@@ -17,7 +17,7 @@ namespace SurfStoreApp.Utils
         public static MvcHtmlString CdnUrl(this HtmlHelper helper, string contentPath)
         {
             // If in release mode
-            #if (!DEBUG)
+           #if (!DEBUG)
 
                 // remove the leading "~" character
                 if (contentPath.StartsWith("~"))

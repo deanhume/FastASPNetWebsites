@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace SurfStoreApp
@@ -45,7 +42,7 @@ namespace SurfStoreApp
             imageHtml.Append(imageDescription);
             imageHtml.Append("</h2>");
             imageHtml.Append("<img src=\"");
-            imageHtml.Append(imagePath);
+            imageHtml.Append(Utils.CdnUtils.CdnUrl(imagePath));
             imageHtml.Append("\" />");
             imageHtml.Append("</div>");
 

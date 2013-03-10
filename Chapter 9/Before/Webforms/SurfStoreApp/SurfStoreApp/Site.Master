@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <asp:ContentPlaceHolder runat="server" ID="HeadContent">
         <meta charset="utf-8">
         <title>Surf Store Application</title>
         <link rel="shortcut icon" href="<%= FileVersionUtils.BuildVersionedFileName("Images/favicon.ico") %>" />
@@ -11,7 +10,6 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <%= Styles.Render("~/Styles/Css")%>
-    </asp:ContentPlaceHolder>
 </head>
 <body>
     <div class="navbar navbar-fixed-top">
