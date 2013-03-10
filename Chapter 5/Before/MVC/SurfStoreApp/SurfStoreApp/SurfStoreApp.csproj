@@ -139,7 +139,9 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap-alert.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -187,7 +189,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54435</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:555/</IISUrl>
+          <IISUrl>http://localhost:44444/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
