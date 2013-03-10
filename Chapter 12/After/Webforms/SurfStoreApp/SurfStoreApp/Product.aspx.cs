@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using StackExchange.Profiling;
 using SurfStoreApp.Entities;
@@ -14,41 +12,41 @@ namespace SurfStoreApp
 {
     public partial class Product : System.Web.UI.Page
     {
-protected void Page_Load(object sender, EventArgs e)
-{
-    // Get the category from the querystring
-    string category = Request.QueryString["category"];
-
-    // Check if we received a category
-    if (!string.IsNullOrWhiteSpace(category))
-    {
-        // Display the images
-        List<ProductDetail> productsForCategory = new List<ProductDetail>();
-        var profiler = MiniProfiler.Current; 	
-        using (profiler.Step("Retrieve Products"))
+        protected void Page_Load(object sender, EventArgs e)
         {
-            ProductLogic productLogic = new ProductLogic();
-            productsForCategory = productLogic.GetProductDetailByCategory(category);
-        }
+            // Get the category from the querystring
+            string category = Request.QueryString["category"];
 
-        using (profiler.Step("Build HTML"))
-        {
-            // Loop through each product and build the HTML that we are going to 
-            // return to the web page
-            foreach (ProductDetail product in productsForCategory)
+            // Check if we received a category
+            if (!string.IsNullOrWhiteSpace(category))
             {
-                phProductImages.Controls.Add(BuildHtml(category, product.ImageUrl, product.ProductDescription));
+                // Display the images
+                List<ProductDetail> productsForCategory = new List<ProductDetail>();
+                var profiler = MiniProfiler.Current;
+                using (profiler.Step("Retrieve Products"))
+                {
+                    ProductLogic productLogic = new ProductLogic();
+                    productsForCategory = productLogic.GetProductDetailByCategory(category);
+                }
+
+                using (profiler.Step("Build HTML"))
+                {
+                    // Loop through each product and build the HTML that we are going to 
+                    // return to the web page
+                    foreach (ProductDetail product in productsForCategory)
+                    {
+                        phProductImages.Controls.Add(BuildHtml(category, product.ImageUrl, product.ProductDescription));
+                    }
+                }
             }
         }
-    }
-}
 
         /// <summary>
         /// Builds the HTML that displays the images.
         /// </summary>
         /// <param name="category">The category.</param>
-        /// <param name="imageName">Name of the image.</param>
-        /// <param name="imageDescription">The image description.</param>
+        /// <param name="imageUrl">The image URL.</param>
+        /// <param name="productDescription">The product description.</param>
         /// <returns></returns>
         public Literal BuildHtml(string category, string imageUrl, string productDescription)
         {
@@ -61,7 +59,7 @@ protected void Page_Load(object sender, EventArgs e)
             imageHtml.Append("\" />");
             imageHtml.Append("</div>");
 
-            return new Literal { Text = imageHtml.ToString() };
+            return new Literal {Text = imageHtml.ToString()};
         }
 
         /// <summary>

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <asp:ContentPlaceHolder runat="server" ID="HeadContent">
@@ -8,8 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-       @System.Web.Optimization.Styles.Render("~/Styles/Css")
-       @System.Web.Optimization.Scripts.Render("~/Scripts/Js")
+       @Styles.Render("~/Styles/Css")
+       @Scripts.Render("~/Scripts/Js")
         <style type="text/css">
             body
             {

@@ -10,8 +10,7 @@
                 <p>
                     This is the ultimate store to purchase your Extreme Sports gear from. 
                     <br/>
-                    We have a
-                    wide range of Surfboards, Snowboards, and Skateboards. We offer the best service
+                    We have a wide range of Surfboards, Snowboards, and Skateboards. We offer the best service
                     and our website speed is exceptional!! 
                     <br />Order Today!
                 </p>
